@@ -6,6 +6,7 @@ using System.Security.Claims;
 
 namespace CookieAuth.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -14,7 +15,6 @@ namespace CookieAuth.Controllers
         {
             _logger = logger;
         }
-        [Authorize]
         public IActionResult Index()
         {
             string? name = User.Claims.Where(x => x.Type == ClaimTypes.Name).Select(x => x.Value).FirstOrDefault();

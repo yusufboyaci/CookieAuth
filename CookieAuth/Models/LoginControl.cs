@@ -13,5 +13,12 @@
                 return false;
             }
         }
+        //public bool LoginUserControlInDatabase(string username, string password)
+        //{
+        //    if (true)
+        //    {
+
+        //    }
+        //}
     }
 }
